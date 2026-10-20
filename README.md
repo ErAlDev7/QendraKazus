@@ -31,7 +31,6 @@ src/components/      header, footer, carousel, cards, gallery…
 src/styles/          tokens.css (colours, type, spacing) + base/layout/components/pages
 public/img/          web-ready images (generated)
 public/files/        downloadable files (PDF)
-crawl/               what was downloaded from the old site (originals, API dumps) – not published
 scripts/             build helpers
 ```
 
