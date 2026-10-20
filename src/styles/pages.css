@@ -591,3 +591,17 @@
     scroll-snap-align: center;
   }
 }
+
+/* Size tuning after the phone / tablet / desktop audit */
+.hero-slider__track {
+  height: clamp(280px, 40vw, 520px);
+}
+.mission__lead {
+  font-size: clamp(1.2rem, 1rem + 1.4vw, 1.9rem);
+}
+.video-row {
+  max-width: 920px;
+}
+.post__cover img {
+  max-height: 600px;
+}

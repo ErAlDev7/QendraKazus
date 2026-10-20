@@ -640,3 +640,10 @@ img.fit-contain {
 .search__clear:hover {
   background: var(--sky);
 }
+
+/* Carousel slides: shorter picture on phone and tablet so text stays in view */
+@media (max-width: 859px) {
+  .slide__media {
+    aspect-ratio: 3 / 2;
+  }
+}
