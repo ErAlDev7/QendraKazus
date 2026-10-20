@@ -76,7 +76,7 @@ export function Carousel({ posts }) {
                   <Img
                     src={image.src}
                     alt=""
-                    sizes="(min-width: 1024px) 640px, 100vw"
+                    sizes="(min-width: 1024px) 800px, 100vw"
                     eager={i === 0}
                   />
                 )}

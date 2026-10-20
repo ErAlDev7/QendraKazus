@@ -12,6 +12,6 @@
 
 export const videos = [
   { youtube: '', file: 'Video1.mp4', title: { sq: '', en: '' }, poster: '' },
-  { youtube: '', file: '', title: { sq: '', en: '' }, poster: '' },
-  { youtube: '', file: '', title: { sq: '', en: '' }, poster: '' },
+  { youtube: '', file: 'Video2.mp4', title: { sq: '', en: '' }, poster: '' },
+  { youtube: '', file: 'Video3.mp4', title: { sq: '', en: '' }, poster: '' },
 ]

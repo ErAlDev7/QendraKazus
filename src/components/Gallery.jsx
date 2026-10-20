@@ -52,7 +52,7 @@ export function Gallery({ images, layout = 'grid', title }) {
               onClick={(e) => open(i, e.currentTarget)}
               aria-label={`${t('gallery.open')}: ${pick(img.alt)}`}
             >
-              <Img src={img.src} alt={img.alt} sizes="(min-width: 1024px) 400px, 50vw" />
+              <Img src={img.src} alt={img.alt} sizes={layout === 'mosaic' ? '(min-width: 820px) 760px, 100vw' : '(min-width: 1024px) 520px, (min-width: 600px) 50vw, 100vw'} />
             </button>
           </li>
         ))}

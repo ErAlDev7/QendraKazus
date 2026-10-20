@@ -36,7 +36,7 @@ export function VideoCard({ video, n }) {
         poster={video.poster ? `/img/${video.poster}-960.webp` : undefined}
         aria-label={label}
       >
-        <source src={`/videos/${video.file}`} type="video/mp4" />
+        <source src={`/videos/${video.file}#t=1`} type="video/mp4" />
       </video>
     )
   } else if (playing) {

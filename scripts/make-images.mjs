@@ -46,7 +46,7 @@ for (const [name, file, fit, crop] of photos) {
     if (meta.width < w * 0.7 && w !== 480) continue
     await base()
       .resize({ width: Math.min(w, meta.width), withoutEnlargement: true })
-      .webp({ quality: 80 })
+      .webp({ quality: 86 })
       .toFile(`${out}${name}-${w}.webp`)
     manifest[name].widths.push([w, Math.min(w, meta.width)])
   }

@@ -4,7 +4,7 @@ import { useLang } from '../lib/i18n.jsx'
 import { Img } from './Img.jsx'
 import { ProjectTags } from './ProjectTags.jsx'
 
-export function PostCard({ post, sizes = '(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw' }) {
+export function PostCard({ post, sizes = '(min-width: 1024px) 480px, (min-width: 640px) 50vw, 100vw' }) {
   const { pick, t, formatDate } = useLang()
   const image = postImage(post)
   const excerpt = pick(post.excerpt)

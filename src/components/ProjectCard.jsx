@@ -10,7 +10,7 @@ export function ProjectCard({ project }) {
   return (
     <article className="project-card">
       <div className="project-card__media">
-        <Img src={project.cover} alt="" sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw" />
+        <Img src={project.cover} alt="" sizes="(min-width: 1024px) 480px, (min-width: 640px) 50vw, 100vw" />
       </div>
       <div className="project-card__body">
         <h3 className="project-card__title">

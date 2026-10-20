@@ -561,3 +561,33 @@
 .contact-block {
   border-top: 1px solid var(--line);
 }
+
+/* Portrait video cards (the videos are vertical phone clips) */
+.video-card__media {
+  aspect-ratio: 9 / 16;
+}
+.video-card__video {
+  object-fit: contain;
+}
+.video-row {
+  max-width: 1020px;
+  margin-inline: auto;
+}
+@media (max-width: 759px) {
+  .video-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-2);
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 0 var(--gutter) var(--space-2);
+    scrollbar-width: none;
+  }
+  .video-row::-webkit-scrollbar {
+    display: none;
+  }
+  .video-card {
+    flex: 0 0 72%;
+    scroll-snap-align: center;
+  }
+}
