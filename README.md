@@ -54,7 +54,7 @@ Add an entry at the top: `id`, `date`, `type` (`call-experts`, `call-project`, `
 **The 7 demo entries are marked `sample: true`: delete them before launch.**
 
 ### An image
-1. Put the original in `crawl/assets/`.
+1. Put the original in a local `crawl/assets/` folder (originals are not stored in the repo).
 2. Add one line to the `photos` list in `scripts/make-images.mjs`: `['my-name', 'original-file.jpg']`.
 3. `npm run images`, then use `'my-name'` as `cover` / in `images`.
 

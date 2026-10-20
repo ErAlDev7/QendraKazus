@@ -1,6 +1,7 @@
 node_modules
 dist
-.impeccable/mocks
-.impeccable/review
-.impeccable/hook.cache.json
+crawl
+.impeccable
+PRODUCT.md
+DESIGN.md
 .claude
