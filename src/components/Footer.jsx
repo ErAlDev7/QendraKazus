@@ -42,7 +42,10 @@ export function Footer() {
         <span>
           © {year} {site.name}. {t('footer.rights')}
         </span>
-        <span className="site-footer__credit">Powered by <strong>ErAlDev</strong></span>
+        <span className="site-footer__credit">Powered by{' '}
+          <a href="https://eraldev.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <strong>ErAlDev</strong>
+          </a></span>
       </div>
     </footer>
   )
