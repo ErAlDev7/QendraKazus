@@ -69,6 +69,13 @@ export default function Notifications() {
                         </a>
                       </p>
                     )}
+                    {n.downloads?.map((d) => (
+                      <p key={d.file}>
+                        <a className="btn" href={`/files/${d.file}`} download>
+                          {t('post.download')}: {pick(d.label)}
+                        </a>
+                      </p>
+                    ))}
                   </div>
                 </li>
               )

@@ -10,121 +10,33 @@
 //   body      { sq, en }  paragraphs separated by a blank line (\n\n)
 //   deadline  optional 'YYYY-MM-DD'. When this day has passed the item is marked "Deadline passed".
 //   link      optional { url, label: { sq, en } }  shows a button
+//   downloads optional [{ file, label: { sq, en } }]  downloadable files in public/files
 //   status    'open' | 'closed' | 'postponed' | 'cancelled'
-//   sample    true on demo entries. Delete the whole entry (or set sample to false) before launch.
-//
-// DEMO ENTRIES BELOW ARE SAMPLES with invented text so you can see the filters and expired states.
-// Delete them, then add real notifications at the top of the list.
 
 export const notifications = [
   {
-    id: 'sample-1',
-    sample: true,
-    date: '2026-10-12',
+    id: 'heritage-voices-mojo-expert',
+    date: '2026-08-02',
     type: 'call-experts',
     status: 'open',
-    deadline: '2026-12-15',
     title: {
-      sq: 'SHEMBULL: Thirrje për ekspertë të komunikimit dixhital',
-      en: 'SAMPLE: Call for digital communication experts',
+      sq: 'Thirrje për ofertë: Ekspert i Medias dhe Tregimit Digjital',
+      en: 'Invitation to Bid: Media and Digital Storytelling Expert',
     },
     body: {
-      sq: 'Ky është një njoftim shembull. Këtu shkruhet përshkrimi i plotë i thirrjes: detyrat, kërkesat dhe mënyra e aplikimit.\n\nFshije këtë hyrje para publikimit.',
-      en: 'This is a sample notification. The full description of the call goes here: tasks, requirements and how to apply.\n\nDelete this entry before launch.',
+      sq: 'Qendra KAZUS fton ekspertë të interesuar të paraqesin ofertë për shërbimin e Ekspertit të Medias dhe Tregimit Digjital në kuadër të projektit “HeritageVoices: Digital Storytelling for Korça’s Monuments”. Eksperti do të zhvillojë modulin e gazetarisë mobile (MoJo) gjatë kampit rinor njëditor, do të trajnojë ambasadorët e rinj në filmim me smartphone, intervistim dhe montazh, si dhe do të ofrojë mentorim teknik për 15 video-histori.\n\nKandidatët duhet të kenë diplomë universitare në komunikim, gazetari, marrëdhënie me publikun, marketing ose fusha të ngjashme, si dhe përvojë në MoJo, prodhim videosh ose media digjitale. Aplikimi duhet të përfshijë CV-në profesionale dhe ofertën financiare të plotësuar e të nënshkruar. Dokumentet mund të dërgohen me email në qendrakazus@gmail.com ose me postë në adresën e Qendrës KAZUS, Korçë, Shqipëri. Afati i dorëzimit është 9 gusht 2026, ora 16:00. Dokumentet e thirrjes dhe formulari i ofertës financiare gjenden më poshtë.',
+      en: 'Qendra KAZUS invites interested experts to submit a bid for the Media and Digital Storytelling Expert service under the “HeritageVoices: Digital Storytelling for Korça’s Monuments” project. The expert will deliver the Mobile Journalism (MoJo) training module during a one-day youth bootcamp, train youth ambassadors in smartphone filming, interviewing and editing, and provide technical mentoring for 15 video stories.\n\nApplicants should have a university degree in communication, journalism, public relations, marketing or a related field, and experience in MoJo, video production or digital media. Applications must include a professional CV and a completed, signed financial offer. Documents may be submitted by email to qendrakazus@gmail.com or by post to Qendra KAZUS, Korçë, Albania. The submission deadline is 9 August 2026 at 16:00. The invitation to bid and financial offer form are available below.',
     },
     link: { url: 'mailto:qendrakazus@gmail.com', label: { sq: 'Apliko me email', en: 'Apply by email' } },
-  },
-  {
-    id: 'sample-2',
-    sample: true,
-    date: '2026-10-05',
-    type: 'erasmus-partners',
-    status: 'open',
-    deadline: '2026-11-30',
-    title: {
-      sq: 'SHEMBULL: Kërkojmë partnerë për një projekt Erasmus+',
-      en: 'SAMPLE: Looking for partners for an Erasmus+ project',
-    },
-    body: {
-      sq: 'Njoftim shembull për thirrje ekipesh ose partnerësh Erasmus+. Shkruani temën, vendet e kërkuara dhe afatin.',
-      en: 'Sample notification for a call for Erasmus+ teams or partners. State the topic, the countries sought and the deadline.',
-    },
-  },
-  {
-    id: 'sample-3',
-    sample: true,
-    date: '2026-09-20',
-    type: 'call-project',
-    status: 'closed',
-    deadline: '2026-10-10',
-    title: {
-      sq: 'SHEMBULL: Thirrje për projekt të ri rinor (afati ka kaluar)',
-      en: 'SAMPLE: Call for a new youth project (deadline passed)',
-    },
-    body: {
-      sq: 'Shembull i një njoftimi me afat të kaluar. Faqja e shënon automatikisht si të përfunduar.',
-      en: 'Example of a notification whose deadline has passed. The page marks it automatically as ended.',
-    },
-  },
-  {
-    id: 'sample-4',
-    sample: true,
-    date: '2026-09-10',
-    type: 'postponed',
-    status: 'postponed',
-    title: {
-      sq: 'SHEMBULL: Aktiviteti i shtyrë për datë të re',
-      en: 'SAMPLE: Activity postponed to a new date',
-    },
-    body: {
-      sq: 'Shembull njoftimi për projekt ose aktivitet të shtyrë. Shkruani arsyen dhe datën e re kur ajo dihet.',
-      en: 'Sample notice for a postponed project or activity. Give the reason and the new date when known.',
-    },
-  },
-  {
-    id: 'sample-5',
-    sample: true,
-    date: '2026-08-25',
-    type: 'cancelled',
-    status: 'cancelled',
-    title: {
-      sq: 'SHEMBULL: Aktivitet i anuluar',
-      en: 'SAMPLE: Cancelled activity',
-    },
-    body: {
-      sq: 'Shembull njoftimi për projekt ose aktivitet të anuluar.',
-      en: 'Sample notice for a cancelled project or activity.',
-    },
-  },
-  {
-    id: 'sample-6',
-    sample: true,
-    date: '2026-08-15',
-    type: 'announcement',
-    status: 'open',
-    title: {
-      sq: 'SHEMBULL: Njoftim i përgjithshëm',
-      en: 'SAMPLE: General announcement',
-    },
-    body: {
-      sq: 'Shembull njoftimi të përgjithshëm, p.sh. orare, ngjarje ose lajme nga zyra.',
-      en: 'Sample general announcement, e.g. opening hours, events or news from the office.',
-    },
-  },
-  {
-    id: 'sample-7',
-    sample: true,
-    date: '2026-08-01',
-    type: 'deadline',
-    status: 'closed',
-    deadline: '2026-09-01',
-    title: {
-      sq: 'SHEMBULL: Afati për dorëzimin e aplikimeve',
-      en: 'SAMPLE: Application submission deadline',
-    },
-    body: {
-      sq: 'Shembull i një afati që ka kaluar tashmë.',
-      en: 'Example of a deadline that has already passed.',
-    },
+    downloads: [
+      {
+        file: 'bid-media-digital-storytelling-expert.docx',
+        label: { sq: 'Dokumenti i thirrjes për ofertë', en: 'Invitation to bid' },
+      },
+      {
+        file: 'financial-offer-form-mojo-expert.docx',
+        label: { sq: 'Formulari i ofertës financiare', en: 'Financial offer form' },
+      },
+    ],
   },
 ]

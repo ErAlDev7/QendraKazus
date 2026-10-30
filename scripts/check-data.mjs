@@ -14,7 +14,12 @@ for (const p of posts) {
 }
 for (const pr of projects) if (!existsSync(`public/img/${pr.cover}-480.webp`)) problems.push(`Project "${pr.id}": image "${pr.cover}" not found.`)
 const types = ['call-experts', 'call-project', 'postponed', 'cancelled', 'erasmus-partners', 'deadline', 'announcement']
-for (const n of notifications) if (!types.includes(n.type)) problems.push(`Notification "${n.id}" has unknown type "${n.type}".`)
+for (const n of notifications) {
+  if (!types.includes(n.type)) problems.push(`Notification "${n.id}" has unknown type "${n.type}".`)
+  for (const d of n.downloads || []) {
+    if (!existsSync(`public/files/${d.file}`)) problems.push(`Notification "${n.id}": file "${d.file}" not found in public/files.`)
+  }
+}
 const sample = notifications.filter((n) => n.sample).length
 if (sample) problems.push(`${sample} SAMPLE notification(s) are still in notifications.js (delete them before launch).`)
 
